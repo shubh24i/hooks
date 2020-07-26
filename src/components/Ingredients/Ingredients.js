@@ -45,16 +45,13 @@ function Ingredients() {
         ]);
       });
   };
-  const addIngredients = useCallback((ingredients) => {
-    console.log(ingredients);
-    setUserIngredients(ingredients);
-  }, []);
+
   return (
     <div className="App">
       <IngredientForm onAddIngredient={addIngrdientHandler} />
 
       <section>
-        <Search onIngredientChange={addIngredients} />
+        <Search />
         {
           <IngredientList
             ingredients={userIngredients}
